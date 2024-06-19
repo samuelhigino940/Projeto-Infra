@@ -1,0 +1,35 @@
+!switch 2960 (acesso lado esquerdo)
+enable
+    Configure terminal
+       interface Fasteternet 0/1
+             description VLAN 40 estoque
+             switchport mode access 
+             switchport access VLAN 40
+             switchport nonegotiate
+
+    exit
+
+enable
+    Configure terminal
+       interface Fasteternet 0/2
+             description VLAN 50 Financeiro
+             switchport mode access 
+             switchport access VLAN 50
+             switchport nonegotiate
+
+    exit
+
+    enable
+    Configure terminal
+       interface Fasteternet 0/3
+             description VLAN 60 Gerencia
+             switchport mode access 
+             switchport access VLAN 60
+             switchport nonegotiate
+
+    exit
+interface range fastethernet 0/4 - 22
+   description no-arthur
+   shutdown
+   end 
+Write 
